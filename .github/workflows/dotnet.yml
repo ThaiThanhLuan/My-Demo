@@ -16,6 +16,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         dotnet-version: 3.x.x
         release_branches: main
     - name: Restore dependencies
@@ -23,5 +24,20 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal -c Release
+    - name: Install Amazon Lambda Tools
+        run: dotnet tool install -g Amazon.Lambda.Tools --framework netcoreapp3.1 && dotnet tool update -g Amazon.Lambda.Tools
+    - name: Export Path for Lambda Tools
+        run: export PATH="$PATH:/root/.dotnet/tools"
+    - name: Package Lambda
+        run: dotnet lambda package --configuration Release --framework netcoreapp3.1 --output-package bin/Release/netcoreapp3.1/${{ env.REPO_NAME }}-${{ steps.tag_version.outputs.new_version }}.zip --msbuild-parameters "/p:PublishReadyToRun=true --self-contained false"
+
+    - name: serverless deploy
+      uses: serverless/github-action@master
+      with:
+        args: deploy --stage dev
+      env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.ROUTING3_DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.ROUTING3_DEV_AWS_SECRET_ACCESS_KEY }}
+          
 
