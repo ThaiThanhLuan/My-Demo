@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = TestCICD
+build_property.ProjectDir = D:\CICD\My-Demo\TestCICD\TestCICD\
