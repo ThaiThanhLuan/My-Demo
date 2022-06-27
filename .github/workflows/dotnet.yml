@@ -33,11 +33,14 @@ jobs:
         run: dotnet lambda package --configuration Release --framework netcoreapp3.1 --output-package bin/Release/netcoreapp3.1/${{ env.REPO_NAME }}-${{ steps.tag_version.outputs.new_version }}.zip --msbuild-parameters "/p:PublishReadyToRun=true --self-contained false"
 
     - name: serverless deploy
-      uses: serverless/github-action@master
+      uses: serverless/github-action@main
       with:
         args: deploy --stage dev
       env:
           AWS_ACCESS_KEY_ID: ${{ secrets.ROUTING3_DEV_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.ROUTING3_DEV_AWS_SECRET_ACCESS_KEY }}
+          
+
+
           
 
