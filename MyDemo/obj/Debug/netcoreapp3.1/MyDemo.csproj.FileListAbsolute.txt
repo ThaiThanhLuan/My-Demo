@@ -1,0 +1,13 @@
+D:\CICD\MyDemo\MyDemo\bin\Debug\netcoreapp3.1\MyDemo.deps.json
+D:\CICD\MyDemo\MyDemo\bin\Debug\netcoreapp3.1\MyDemo.runtimeconfig.json
+D:\CICD\MyDemo\MyDemo\bin\Debug\netcoreapp3.1\MyDemo.runtimeconfig.dev.json
+D:\CICD\MyDemo\MyDemo\bin\Debug\netcoreapp3.1\MyDemo.dll
+D:\CICD\MyDemo\MyDemo\bin\Debug\netcoreapp3.1\MyDemo.pdb
+D:\CICD\MyDemo\MyDemo\obj\Debug\netcoreapp3.1\MyDemo.csproj.AssemblyReference.cache
+D:\CICD\MyDemo\MyDemo\obj\Debug\netcoreapp3.1\MyDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\CICD\MyDemo\MyDemo\obj\Debug\netcoreapp3.1\MyDemo.AssemblyInfoInputs.cache
+D:\CICD\MyDemo\MyDemo\obj\Debug\netcoreapp3.1\MyDemo.AssemblyInfo.cs
+D:\CICD\MyDemo\MyDemo\obj\Debug\netcoreapp3.1\MyDemo.csproj.CoreCompileInputs.cache
+D:\CICD\MyDemo\MyDemo\obj\Debug\netcoreapp3.1\MyDemo.dll
+D:\CICD\MyDemo\MyDemo\obj\Debug\netcoreapp3.1\MyDemo.pdb
+D:\CICD\MyDemo\MyDemo\obj\Debug\netcoreapp3.1\MyDemo.genruntimeconfig.cache
